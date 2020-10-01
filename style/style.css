@@ -1,0 +1,116 @@
+/* Fonts + globala variabler */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,600&family=Righteous&display=swap');
+
+/* Färgvariabler */
+:root {
+    --orange: #E09A31;
+    --dark-grey: #252932;
+    --light-grey: #F2F2F2;
+    --paragraf-grey: #313131;
+}
+
+/* Element */
+body { margin: 0; }
+
+h2, h3, p { 
+    color: var(--paragraf-grey);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+    font-weight: 500;
+    color: var(--light-grey);
+    font-size: 4.625rem;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, .43);
+}
+
+
+
+.no-margin { margin: 0}
+
+/* Navigation bar */
+.nav-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--dark-grey);
+    padding: .625rem 0;
+}
+
+    /* Logotyp */
+.nav-wrapper__logotype { padding-left: .625rem; }
+
+    /* Listknapp till dropdown-meny */
+.nav-wrapper__list-button {
+    width: 2.3125rem;
+    padding-right: 0.625rem;
+}   
+
+    /* Dropdown-menyn */
+.nav-wrapper__list-hidden { display: none; }
+
+/* Header */
+.h-wrapper {
+    background: url('/assets/jpg/castle.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 46.5625rem;
+    padding: 1rem 0;
+}
+    /* Artikeln i headern */
+.h-item__articles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 8.5rem 1rem;
+}
+
+    /* Rubrik i headern */
+.h-item__articles-h1 { margin: 0; }
+
+    /* Paragrafen i headern */
+.h-item__articles-p {
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 1.25rem;
+    padding-top: 3rem;
+}
+
+/* Main */
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-wrapper__h2 { padding: 3rem;}
+
+.card-wrapper__card {
+    display: flex;
+    flex-direction: column;
+    max-width: 20.8125rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 2rem auto;
+    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card-wrapper__card-image {
+    max-width: 20.8125rem; 
+    border-radius: 0.3125rem;
+}
+
+.card-wrapper__card-h3 { 
+    font-size: 1.2rem;
+    margin: 0.8rem 0;
+}
+
+.card-wrapper__card-p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0 1rem;
+}
+

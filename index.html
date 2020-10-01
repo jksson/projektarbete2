@@ -11,10 +11,12 @@
 <body>
     <nav class="nav-wrapper">
         <!-- Navigation bar -->
-        <aside>
-            <img src="/assets/logo.svg" alt="">
-        </aside>
-        <ul>
+
+        <img src="/assets/svg/logo.svg" alt="Logotyp för Upplev Örebro" class="nav-wrapper__logotype">
+        <!-- Menyknapp ska ändra riktning och peka nedåt när aktiv -->
+        <img src="/assets/svg/arrow.svg" alt="Menyknapp för dropdown" class="nav-wrapper__list-button">
+
+        <ul class="nav-wrapper__list-hidden">
             <li>
                 <a href="">
                     Hem
@@ -43,19 +45,19 @@
         </ul>
     </nav>
 
-    <header>
+    <header class="h-wrapper">
         <!-- Header blir wrapper -->
         <!-- Hero -->
-        <section>
+        <section class="h-item__articles">
             <!-- Bakgrund -->
-            <article>
-                <h1>
+            <article class="">
+                <h1 class="h-item__articles-h1">
                     Upplev Örebro
                 </h1>
             </article>
 
             <article>
-                <p>
+                <p class="h-item__articles-p">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis delectus quos natus
                     aspernatur amet distinctio asperiores libero, tenetur explicabo iure provident quia placeat ut sunt
                     laborum hic nulla laudantium.
@@ -64,54 +66,54 @@
         </section>
     </header>
 
-    <main>
+    <main class="card-wrapper">
         <!-- Main -->
-        <!-- Rubrik med tre kort -->
-        <h2>
+        <!-- Rubrik -->
+        <h2 class="card-wrapper__h2 no-margin">
             Populärt just nu
         </h2>
         <!-- Tre kort -->
-        <section>
-            <figure>
-                <img src="" alt="">
+        <section class="card-wrapper__card">
+            <figure class="no-margin">
+                <img src="/assets/jpg/utsikt 1.jpg" alt="Utsikt över trädtoppar" class="card-wrapper__card-image">
             </figure>
             <article>
-                <h3>
+                <h3 class="card-wrapper__card-h3">
                     Njut av utsikten i Ånnaboda
                 </h3>
 
-                <p>
+                <p class="card-wrapper__card-p">
                     Ånnaboda bjuder på såväl camping och skidbackar men även en natur som är den överlägset vackraste i
                     Sverige.
                 </p>
             </article>
         </section>
-        <section>
-            <figure>
-                <img src="" alt="">
+        <section class="card-wrapper__card">
+            <figure class="no-margin">
+                <img src="/assets/jpg/svamp.jpg" alt="Utsikt över trädtoppar" class="card-wrapper__card-image">
             </figure>
             <article>
-                <h3>
+                <h3 class="card-wrapper__card-h3">
                     Svampplock i Varbergaskogen
                 </h3>
 
-                <p>
+                <p class="card-wrapper__card-p">
                     Svampsläktet som växer längs spåret i Varbega är kända för deras distinkta och vassa smak. För den
                     erfarna plockaren.
                 </p>
             </article>
         </section>
-        <section>
-            <figure>
-                <img src="" alt="">
+        <section class="card-wrapper__card">
+            <figure class="no-margin">
+                <img src="/assets/jpg/beaver.jpg" alt="Utsikt över trädtoppar" class="card-wrapper__card-image">
             </figure>
             <article>
-                <h3>
+                <h3 class="card-wrapper__card-h3">
                     Bäversafari i Kvismare kanal
                 </h3>
 
-                <p>
-                    Möt naturens möbelsnickare, bävern, längs med Kvismare kanal.
+                <p class="card-wrapper__card-p">
+                    Möt naturens möbelsnickare, bävern, längs med Kvismare kanal!
                 </p>
             </article>
         </section>
