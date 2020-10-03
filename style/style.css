@@ -10,6 +10,7 @@
     --text-shadow:       rgba(0, 0, 0, 0.43);
     --box-shadow:        rgba(49, 49, 49, 0.65);
     --card-box-shadow:   rgba(0, 0, 0, 0.25);
+    scroll-behavior: smooth;
 }
 
 /* Länk Aktiv */
@@ -18,24 +19,27 @@
     color: var(--orange)
 }
 
-.link__inactive {
-    text-decoration: none;
-    color: var(--light-grey);
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    margin: .5rem;
-    line-height: 2rem;
+.nav-wrapper__list-hidden {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto;
 }
 
+.link__center {
+    text-align: center;
+}
 
 .bg-overlay { box-shadow: inset 1px 56.25rem var(--box-shadow); }
-
+.text-head__width { max-width: 18.75rem; }
 /* Element */
+
+/* Body och en no-margin för återanvändning */
 body, 
 .no-margin { 
     margin: 0; 
 }
 
+/* Rubriker och paragraf - standardtext */
 h2,
 h3,
 p { 
@@ -43,6 +47,7 @@ p {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Rubrik med fasta egenskaper */
 h1 {
     font-family: 'Righteous', cursive;
     font-weight: 500;
@@ -53,6 +58,8 @@ h1 {
 
 /* Navigation bar */
 .nav-wrapper {
+    position: fixed; 
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -66,12 +73,68 @@ h1 {
 
     /* Listknapp till dropdown-meny */
 .nav-wrapper__list-button {
-    width: 2.3125rem;
-    padding-right: 0.625rem;
-}   
+    font-size: 3rem;
+    color: var(--light-grey);
+    padding-right: 1rem;
+    
+}
+
+/* .menubtn {
+    background: none;
+    appearance: none;
+} */
+    /* Dropdown knapp vid hover */
+    /* .nav-wrapper__list-button */
 
     /* Dropdown-menyn */
-.nav-wrapper__list-hidden { display: none; }
+.nav-wrapper__list-hidden { 
+    display: none;
+    position: fixed; 
+    width: 100%;
+    top: 4.25rem;
+    right: 0;
+    margin: 0;
+    padding-left: 2rem;
+    background: var(--dark-grey);
+}
+
+.dropdown__show {
+    display: block;
+}
+
+.nav-wrapper__list-hidden-link {
+    display: flex;
+    max-width: 100%;
+    padding-left: .5rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--light-grey);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.link__active {
+    color: var(--orange)
+}
+
+.caret__active-link {
+    width: .7rem;
+    margin-right: .8rem;
+}
+
+.caret__inactive-link {
+    opacity: 0;
+    width: .7rem;
+    margin-right: .8rem;
+}
+
+.nav-wrapper__list-hidden-link:hover {
+    background: var(--light-grey);
+    color: var(--dark-grey)
+}
 
 /* Header */
 .h-wrapper {
@@ -142,14 +205,14 @@ h1 {
 
 /* Hållbar framtid bakgrund */
 .future-article__bg {
-    background: url('/assets/jpg/coal.jpg') no-repeat;
+    background: linear-gradient(to bottom, rgb(37 41 50 / 37%), rgb(37 41 50)), url('/assets/jpg/coal.jpg') no-repeat;
     background-size: cover;
     background-position-x: center;
     padding: 1.5rem 1rem 2rem 1rem;
 }
 
     /* Framtidens paragraf */
-.f-item__articles-p {
+.future-item__articles-p {
     padding-top: 1.6rem;
     color: white;
     font-family: 'Righteous', cursive;
@@ -157,25 +220,20 @@ h1 {
     margin: 0;
     font-weight: 100;
     text-shadow: 4px 4px 4px var(--text-shadow);
+    max-width: 18.75rem;
 }
+
+
 
 
 /* Footer */
 .footer-wrapper { 
-    /* display: flex;
-    flex-direction: column; */
     background: var(--dark-grey);
     text-align: center;
-    /* width: 100vw; */
+    padding-top: 2.4rem;
 }
-.footer-wrapper__figure { 
-    
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
 
-}
+/* Länkarna i footern */
 .footer-wrapper__ul { 
     display: flex;
     flex-direction: column;
@@ -183,4 +241,20 @@ h1 {
     margin: 0; 
     justify-content: space-evenly;
     padding: 2rem 0 2rem 0;
+}
+
+/* Uppåtknapp i footer */
+.footer__button-up { 
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--dark-grey);
+}
+
+/* SVG för uppåtknapp - även länk */
+.footer__button-up__arrow {
+    display: inline-block;
+    max-width: 100%;
+    margin: .1rem auto 0 auto;
+    color: var(--dark-grey);
 }
