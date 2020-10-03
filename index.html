@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style\style.css">
+    <link rel="stylesheet" href="style/style.css">
     <title>Upplev Örebro</title>
 </head>
 
@@ -45,13 +45,13 @@
         </ul>
     </nav>
 
-    <header class="h-wrapper">
+    <header class="h-wrapper bg-overlay">
         <!-- Header blir wrapper -->
         <!-- Hero -->
         <section class="h-item__articles">
             <!-- Bakgrund -->
             <article class="">
-                <h1 class="h-item__articles-h1">
+                <h1 class="no-margin">
                     Upplev Örebro
                 </h1>
             </article>
@@ -75,7 +75,7 @@
         <!-- Tre kort -->
         <section class="card-wrapper__card">
             <figure class="no-margin">
-                <img src="/assets/jpg/utsikt 1.jpg" alt="Utsikt över trädtoppar" class="card-wrapper__card-image">
+                <img src="/assets/jpg/utsikt.jpg" alt="Utsikt över trädtoppar" class="card-wrapper__card-image">
             </figure>
             <article>
                 <h3 class="card-wrapper__card-h3">
@@ -90,7 +90,7 @@
         </section>
         <section class="card-wrapper__card">
             <figure class="no-margin">
-                <img src="/assets/jpg/svamp.jpg" alt="Utsikt över trädtoppar" class="card-wrapper__card-image">
+                <img src="/assets/jpg/svamp.jpg" alt="Giftig flugsvamp" class="card-wrapper__card-image">
             </figure>
             <article>
                 <h3 class="card-wrapper__card-h3">
@@ -105,7 +105,7 @@
         </section>
         <section class="card-wrapper__card">
             <figure class="no-margin">
-                <img src="/assets/jpg/beaver.jpg" alt="Utsikt över trädtoppar" class="card-wrapper__card-image">
+                <img src="/assets/jpg/beaver.jpg" alt="Glad simmande bäver" class="card-wrapper__card-image">
             </figure>
             <article>
                 <h3 class="card-wrapper__card-h3">
@@ -119,47 +119,50 @@
         </section>
     </main>
 
-    <section>
+    <section class="future-article__bg bg-overlay">
         <!-- Artikel -->
         <!-- Bakgrundsbild -->
         <section>
-            <h1>
+            <h1 class="no-margin">
                 Örebro satsar på
                 en hållbar framtid
             </h1>
-            <p>
+            <p class="f-item__articles-p future-padding">
                 Att uran hittats i Kvarntorp är ingen hemlighet - men en ny studie visar att marken utmed gränsen till
-                förorten Kumla är berikad på kol.
-
+                förorten Kumla är berikad på kol.</p>
+            <p class="f-item__articles-p">
                 Kol används med fördel till energitillverkning och planer på att gräva upp delar av Kumla för att lämna
                 plats åt en kolgruva förhandlas i detta nu med berörda stammar i både Kumla- och Sköllerstasocknen.
-
+            </p>
+            <p class="f-item__articles-p">
                 I och med detta skapas tusentals nya arbetstillfällen.
-
-                Hitta lediga jobb här.
+            </p>
+            <p class="f-item__articles-p">
+                Hitta lediga jobb <a href="https://arbetsformedlingen.se/" class="link__active">här</a>.
             </p>
         </section>
     </section>
 
-    <footer>
+    <footer class="footer-wrapper">
         <!-- Footer -->
-        <figure>
+
+        <figure class="footer-wrapper__figure">
             <!-- knapp uppåt -->
         </figure>
 
-        <ul>
+        <ul class="footer-wrapper__ul">
             <li>
-                <a href="" class="">
+                <a href="/views/kontakt.html" class="link__inactive">
                     Kontakt
                 </a>
             </li>
             <li>
-                <a href="" class="">
+                <a href="/views/faq.html" class="link__inactive">
                     Frågor och svar
                 </a>
             </li>
             <li>
-                <a href="" class="">
+                <a href="/views/about.html" class="link__inactive">
                     Om oss
                 </a>
             </li>

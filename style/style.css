@@ -3,16 +3,42 @@
 
 /* Färgvariabler */
 :root {
-    --orange: #E09A31;
-    --dark-grey: #252932;
-    --light-grey: #F2F2F2;
-    --paragraf-grey: #313131;
+    --orange:            #E09A31;
+    --dark-grey:         #252932;
+    --light-grey:        #F2F2F2;
+    --paragraf-grey:     #313131;
+    --text-shadow:       rgba(0, 0, 0, 0.43);
+    --box-shadow:        rgba(49, 49, 49, 0.65);
+    --card-box-shadow:   rgba(0, 0, 0, 0.25);
 }
 
-/* Element */
-body { margin: 0; }
+/* Länk Aktiv */
+.link__active {
+    text-decoration: none;
+    color: var(--orange)
+}
 
-h2, h3, p { 
+.link__inactive {
+    text-decoration: none;
+    color: var(--light-grey);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    margin: .5rem;
+    line-height: 2rem;
+}
+
+
+.bg-overlay { box-shadow: inset 1px 56.25rem var(--box-shadow); }
+
+/* Element */
+body, 
+.no-margin { 
+    margin: 0; 
+}
+
+h2,
+h3,
+p { 
     color: var(--paragraf-grey);
     font-family: 'Poppins', sans-serif;
 }
@@ -21,13 +47,9 @@ h1 {
     font-family: 'Righteous', cursive;
     font-weight: 500;
     color: var(--light-grey);
-    font-size: 4.625rem;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, .43);
+    font-size: 4rem;
+    text-shadow: 4px 4px 4px var(--text-shadow);
 }
-
-
-
-.no-margin { margin: 0}
 
 /* Navigation bar */
 .nav-wrapper {
@@ -58,6 +80,7 @@ h1 {
     background-position: center;
     height: 46.5625rem;
     padding: 1rem 0;
+    
 }
     /* Artikeln i headern */
 .h-item__articles {
@@ -67,50 +90,97 @@ h1 {
     padding: 8.5rem 1rem;
 }
 
-    /* Rubrik i headern */
-.h-item__articles-h1 { margin: 0; }
-
     /* Paragrafen i headern */
 .h-item__articles-p {
     color: white;
     font-family: 'Righteous', cursive;
     font-size: 1.25rem;
     padding-top: 3rem;
+    margin: 0;
+    text-shadow: 4px 4px 4px var(--text-shadow);
 }
 
 /* Main */
 
+/* Kortens wrapper */
 .card-wrapper {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
+    /* Populärt just nu rubrik */
 .card-wrapper__h2 { padding: 3rem;}
-
+   
+    /* Korten */
 .card-wrapper__card {
-    display: flex;
-    flex-direction: column;
-    max-width: 20.8125rem;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 2rem auto;
-    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+    display:            flex;
+    flex-direction:     column;
+    max-width:          20.8125rem;
+    justify-content:    center;
+    align-items:        center;
+    margin:             0 auto 2rem auto;
+    box-shadow:         1px 1px 6px 0px var(--card-box-shadow);
 }
 
+    /* Kortens bild */
 .card-wrapper__card-image {
     max-width: 20.8125rem; 
     border-radius: 0.3125rem;
 }
-
+    /* Kortens rubrik */
 .card-wrapper__card-h3 { 
     font-size: 1.2rem;
     margin: 0.8rem 0;
 }
-
+    /* Kortens paragraf */
 .card-wrapper__card-p {
     font-size: 0.9rem;
     font-weight: 500;
     padding: 0 1rem;
 }
 
+/* Hållbar framtid bakgrund */
+.future-article__bg {
+    background: url('/assets/jpg/coal.jpg') no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    padding: 1.5rem 1rem 2rem 1rem;
+}
+
+    /* Framtidens paragraf */
+.f-item__articles-p {
+    padding-top: 1.6rem;
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 100;
+    text-shadow: 4px 4px 4px var(--text-shadow);
+}
+
+
+/* Footer */
+.footer-wrapper { 
+    /* display: flex;
+    flex-direction: column; */
+    background: var(--dark-grey);
+    text-align: center;
+    /* width: 100vw; */
+}
+.footer-wrapper__figure { 
+    
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+}
+.footer-wrapper__ul { 
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0; 
+    justify-content: space-evenly;
+    padding: 2rem 0 2rem 0;
+}
