@@ -19,7 +19,7 @@
                         src="/assets/svg/logo.svg" alt="Logotyp för Upplev Örebro"></a></section>
             <!-- Menyknapp ska ändra riktning och peka nedåt när aktiv -->
             <a onclick="menudropdown()" class="desktop__hidden">
-                <i class="fas fa-angle-double-left nav-wrapper__list-button" id="dropDownButton"></i>
+                <i class="fas fa-angle-double-left nav-wrapper__list-button"></i>
                 <!-- <img src="/assets/svg/arrow.svg" alt="Menyknapp för dropdown" > -->
             </a>
             <ul class="nav-wrapper__list-hidden" id="dropDownMenu">
@@ -88,18 +88,35 @@
     <main>
         <!-- Main -->
         <!-- Rubrik -->
-        <h2 class="card-wrapper__h2" id="activity">
+        <h2 class="card-wrapper__contact-h2" id="contact">
             Kontakta oss
         </h2>
         <!-- Fyra kvadrater -->
 
         <section class="contact__container">
             <section class="contact__container__forms">
-                <input type="text" id="name" name="name" value="Namn:" class="contact__container__forms-name">
-                <input type="number" id="phone" name="phone" value="Telefonnummer:" class="contact__container__forms-phone">
-                <input type="email" id="email" name="email" value="E-mail:" class="contact__container__forms-email">
-                <input type="number" id="ssnumber" name="ssnumber" value="Personnummer:" class="contact__container__forms-ssnumber">
-                <input type="text" id="message=" name="message=" value="Skriv ett meddelande" class="contact__container__forms-message"> 
+                <input type="text" id="name" name="name" placeholder="Namn:" class="contact__container__forms-name">
+                <input type="number" id="phone" name="phone"  placeholder="Telefonnummer:" class="contact__container__forms-phone">
+                <input type="email" id="email" name="email"  placeholder="E-mail:" class="contact__container__forms-email">
+                <input type="number" id="ssnumber" name="ssnumber"  placeholder="Personnummer (ÅÅMMDD-XXXX):" class="contact__container__forms-ssnumber">
+                <textarea id="message=" name="message=" rows="10" cols="30" placeholder="Skriv ett meddelande..." class="contact__container__forms-message"></textarea> 
+            </section>
+            <section class="send__button-container">
+            <input type="button" value="SKICKA" class="send__button">
+            </section>
+            <section class="contact__social-media__container">
+                <a href="https:\\facebook.com"><i class="fab fa-facebook-square contact__social-media__container-item"></i></a>
+                <a href=""><i class="fab fa-instagram-square contact__social-media__container-item"></i></a>
+                <a onclick="adrCard()"><i class="fas fa-address-card contact__social-media__container-item"></i></a>
+                <article class="contact__social-media__container-adr" id="adrcard">
+                    <h3 contact__social-media__container-adr-h3>
+                        Johan Karlsson <br>
+                        FED20GB <br>
+
+
+                    </h3>
+                    
+                </article>
             </section>
         </section>
 
@@ -122,7 +139,7 @@
             </li>
         </ul>
     </footer>
-    <script src="../scripts/dropdownmenu.js"></script>
+    <script src="../scripts/jscript.js"></script>
 </body>
 
 </html>

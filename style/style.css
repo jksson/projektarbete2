@@ -30,16 +30,15 @@
     grid-template-rows: auto;
 }
 
-.link__center {
+.link__center { text-align: center; }
+
+.bg-overlay { box-shadow: inset 1px 56.25rem var(--box-shadow); }
+
+.text-head__width { 
     text-align: center;
 }
 
-.bg-overlay { box-shadow: inset 1px 56.25rem var(--box-shadow); }
-.text-head__width { 
-    max-width: 300px; 
-}
 /* Element */
-
 /* Body och en no-margin för återanvändning */
 body, 
 .no-margin { 
@@ -66,20 +65,28 @@ h1 {
     text-shadow: 4px 4px 4px var(--text-shadow);
 }
 
-figure {
+/* figure {
     margin-block-start: 0;
     margin-block-end: 0;
     margin-inline-start: 0;
     margin-inline-end: 0;
-}
+} */
 
 /* Navigation bar */
+/* Navigation container */
+.nav__container {
+    position: fixed;
+    background: var(--dark-grey);
+    width: 100%;
+    align-items: center;
+}
 
 .nav__container--wrap-img {
     display: flex;
     flex: 1;
 }
 
+/* Navigation wrapper */
 .nav-wrapper {
     width: 100%;
     flex-wrap: nowrap;
@@ -105,13 +112,6 @@ figure {
     
 }
 
-/* .menubtn {
-    background: none;
-    appearance: none;
-} */
-    /* Dropdown knapp vid hover */
-    /* .nav-wrapper__list-button */
-
     /* Dropdown-menyn */
 .nav-wrapper__list-hidden { 
     display: none;
@@ -124,9 +124,6 @@ figure {
     background: var(--dark-grey);
 }
 
-.dropdown__show {
-    display: block;
-}
 
 .nav-wrapper__list-hidden-link {
     display: flex;
@@ -142,24 +139,23 @@ figure {
     line-height: 2rem;
 }
 
-.link__active {
-    color: var(--orange)
-}
+.link__active { color: var(--orange); }
 
 .caret__active-link {
     width: .7rem;
     margin-right: .8rem;
 }
 
-
 .nav-wrapper__list-hidden-link:hover {
     background: var(--light-grey);
     color: var(--dark-grey)
 }
 
+    /* Visa / dölj dropdownmeny */
+.dropdown__show { display: block; }
+
 /* Header */
-
-
+/* Bakgrundsbilder för olika sidor */
 .index__h-wrapper { background: url('/assets/jpg/castle.jpg') no-repeat; }
 .activities__h-wrapper { background: url('../assets/jpg/kulturhus.jpg') no-repeat; }
 .boende__h-wrapper { background: url('../assets/large/tent.jpg') no-repeat;}
@@ -190,21 +186,18 @@ figure {
 }
 .h-item__articles {
     flex-wrap: wrap;
-    padding: 11.5rem 0 0 .5rem;
+    padding: 11.5rem .5rem 0 .5rem;
+    text-align: center;
 }
 
     /* Paragrafen i headern */
 .h-item__articles-p {
-    color: white;
-    padding-top: 3rem;
-    margin: 0;
+    color: var(--light-grey);
     text-shadow: 4px 4px 4px var(--text-shadow);
-    max-width: 20ch;
 }
 
 /* Main */
-
-/* Kortens wrapper */
+    /* Kortens wrapper */
 .main__card-wrapper {
     display: flex;
     flex-direction: column;
@@ -213,8 +206,11 @@ figure {
 
     /* Populärt just nu rubrik */
 .card-wrapper__h2 { 
-    padding: 3rem;
+    padding: 2rem;
+}
 
+.card-wrapper__contact-h2 {
+    padding: 0;
 }
    
     /* Korten */
@@ -256,10 +252,8 @@ figure {
     /* Framtidens paragraf */
 .future-item__articles-p {
     padding-top: 1.6rem;
-    color: white;
-    margin: 0;
+    color: var(--light-grey);
     text-shadow: 4px 4px 4px var(--text-shadow);
-    max-width: 18.75rem;
 }
 
 /* Aktiviteter */
@@ -310,13 +304,6 @@ figure {
     color: var(--dark-grey);
 }
 
-.nav__container {
-    position: fixed;
-    background: var(--dark-grey);
-    width: 100%;
-    /* max-width: 1000px; */
-    align-items: center;
-}
 
 .ent__squares-container {
     display: grid;
@@ -331,13 +318,12 @@ figure {
     margin: 5rem auto 0 auto;
 }
 
+
 .ent__squares-container-1 { background-color: var(--dark-grey); width: 100%;}
 .ent__squares-container-2 { background-color: var(--apple-bg); width: 100%;}
 .ent__squares-container-3 { background-color: var(--cheers-bg); width: 100%;}
 .ent__squares-container-4 { background-color: var(--jonglera-bg); width: 100%;}
-.ent__container-overlay { 
-    text-align: center;
-}
+.ent__container-overlay { text-align: center; }
 
 .ent__squares-container-link {
     text-decoration: none;
@@ -373,17 +359,80 @@ figure {
 .contact__container__forms-phone { grid-area: t;}
 .contact__container__forms-email{  grid-area: e;}
 .contact__container__forms-ssnumber { grid-area: p;}
-.contact__container__forms-message {  grid-area: m;}
+.contact__container__forms-message { grid-area: m;}
 
 .contact__container__forms-name,
 .contact__container__forms-phone,
 .contact__container__forms-email,
-.contact__container__forms-email {
-    margin: 0 auto .2rem auto;
-    width: 90%;
+.contact__container__forms-message,
+.contact__container__forms-ssnumber {
+    margin: 0 auto .3rem auto;
+    box-shadow: 1px 1px 3px 0px var(--card-box-shadow);
+    min-width: 90%;
+    max-width: 90%;
     height: 2rem;
-
+    border-radius: 5px;
+    border: 1px solid var(--apple-bg);
+    color: var(--apple-bg);
+    padding-left: .5rem;
+    font-family: 'Poppins', sans-serif;
 }
+
+.contact__container__forms-message { 
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    height: 10rem;
+    padding-top: .5rem;
+    width: 90%;
+    margin: 0 auto .2rem auto;
+}
+
+.contact__social-media__container {
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    grid-template-areas:    "icon icon icon"
+                            "adr adr adr";
+}
+.contact__social-media__container-item {
+    grid-area: icon;
+    font-size: 4rem;
+    color: var(--dark-grey);
+    margin: 0;
+}
+
+.contact__social-media__container-adr {
+    display: none;
+    grid-area: adr;
+    background: var(--dark-grey);
+    margin: 0 0 .5rem 0;
+    padding: 1rem 1rem;
+}
+
+.contact__social-media__container-adr h3 {
+    text-align: left;
+    font-weight: 300;
+    color: var(--light-grey);
+}
+
+.send__button-container {
+    text-align: center;
+}
+
+.send__button {
+    background: var(--dark-grey);
+    color: var(--orange);
+    padding: .5rem;
+    margin: 0 auto 2rem auto;
+    align-items: center;
+    justify-content: center;
+    width: 93%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
 
 /* SVG-animationer */
         
@@ -397,17 +446,19 @@ figure {
 
 /* Desktop */
 @media screen and (min-width:850px) {
-
+    /* Rubriker */
     h1 { font-size: 4rem; }
-    
-    .index__h-wrapper { background-position-y: -15rem; }
 
-    .desktop__hidden { display: none; }
+    /* header-wrapper för index-sida */
+    .index__h-wrapper { background-position-y: -15rem; }
 
     .h-wrapper-right {
         display: block;
         justify-content: unset; 
     }
+
+    /* Menyn och navbar */
+    .desktop__hidden { display: none; }
 
     .nav-wrapper__list-hidden { 
         position: initial;
@@ -435,11 +486,11 @@ figure {
         margin-left: .4rem;
     }
 
-    .nav__link:hover{ background: var(--light-grey); }
-
+    .nav__link:hover { background: var(--light-grey); }
+    
+    /* Mörkt overlay för synlig text */
     .bg-overlay {
         max-width: 22.75rem;
-        padding-left: 2rem;
     }
 
     .bg-overlay__container {
@@ -449,10 +500,10 @@ figure {
         min-height: 100%;
         justify-content: end;
     }
-
+    /* För overlay på vänster sida */
     .bg-overlay__container-left { justify-content: unset; }
 
-    .h-item__articles-p { max-width: 30ch; }
+    .h-item__articles-p { max-width: 30ch; margin: 0 auto;}
 
     .main__card-wrapper {
         display: grid;
@@ -472,8 +523,6 @@ figure {
     .card__grid-c4      { grid-area: c4; display: block;}
     .card__grid-c5      { grid-area: c5; display: block;}
     .card__grid-c6      { grid-area: c6; display: block;}
-
-    .text-head__width { max-width: 30rem; }
 
     .future-article__bg-wrapper {
         max-width: 1220px;
@@ -537,6 +586,53 @@ figure {
     .ent__squares-container-fig {
         margin-top: 10rem;
         padding: 0;
+    }
+
+    .contact__container {
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+    .contact__container__forms {
+        display: grid;
+        grid-template-areas: "n m m"
+                             "t m m"
+                             "e m m"
+                             "p m m"; 
+        margin-bottom: 1rem;
+    }
+
+    .contact__social-media__container {
+        max-width: 600px;
+        margin: 0 auto 5rem auto;
+    }
+
+    .contact__social-media__container-item {
+        font-size: 7rem;
+        cursor: pointer;
+    }
+    .contact__social-media__container-adr {
+        padding: 1rem 4.8rem;
+        max-width: 17rem;
+        justify-self: end;
+        
+    }
+
+    .send__button-container {
+        text-align: right;
+        margin-right: 2rem;
+    }
+    
+    .send__button {
+        background: var(--dark-grey);
+        color: var(--light-grey);
+        padding: .5rem;
+        margin: 0 auto 2rem auto;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
     }
 }
 
