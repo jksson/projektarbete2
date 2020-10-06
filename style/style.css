@@ -156,7 +156,7 @@ h1 {
 
 /* Header */
 /* Bakgrundsbilder för olika sidor */
-.index__h-wrapper { background: url('/assets/jpg/castle.jpg') no-repeat; }
+.index__h-wrapper { background: url('../assets/jpg/castle.jpg') no-repeat; }
 .activities__h-wrapper { background: url('../assets/jpg/kulturhus.jpg') no-repeat; }
 .boende__h-wrapper { background: url('../assets/large/tent.jpg') no-repeat;}
 .nojen__h-wrapper {background: url('../assets/large/entertainment.jpg') no-repeat; }
@@ -243,7 +243,7 @@ h1 {
 
 /* Hållbar framtid bakgrund */
 .future-article__bg {
-    background: linear-gradient(to bottom, rgb(37 41 50 / 37%), rgb(37 41 50)), url('/assets/jpg/coal.jpg') no-repeat;
+    background: linear-gradient(to bottom, rgb(37 41 50 / 37%), rgb(37 41 50)), url('../assets/large/coal.jpg') no-repeat;
     background-size: cover;
     background-position-x: center;
     padding: 1.5rem 1rem 2rem 1rem;
@@ -531,7 +531,7 @@ h1 {
 
     /* Framtiden (index) */
     .future-article__bg {
-        background:  url(/assets/jpg/coal.jpg) no-repeat;
+        background:  url(../assets/jpg/coal.jpg) no-repeat;
         background-size: cover;
         background-position-x: center;
         padding: 0;
