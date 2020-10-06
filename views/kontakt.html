@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Aktiviteter | Upplev Örebro</title>
+    <script src="https://kit.fontawesome.com/cfec937611.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="the__top">
+
+    <nav class="nav__container">
+        <!-- Navigation bar -->
+        <section class="nav-wrapper">
+            <section class="nav__container--wrap-img"><a href="#the__top" class="nav-wrapper__logotype"><img
+                        src="/assets/svg/logo.svg" alt="Logotyp för Upplev Örebro"></a></section>
+            <!-- Menyknapp ska ändra riktning och peka nedåt när aktiv -->
+            <a onclick="menudropdown()" class="desktop__hidden">
+                <i class="fas fa-angle-double-left nav-wrapper__list-button" id="dropDownButton"></i>
+                <!-- <img src="/assets/svg/arrow.svg" alt="Menyknapp för dropdown" > -->
+            </a>
+            <ul class="nav-wrapper__list-hidden" id="dropDownMenu">
+
+                <a href="../index.html" class="nav__link">
+                    <li class="nav-wrapper__list-hidden-link">
+                        <img src="/assets/svg/caret2.svg" alt="" class="caret__active-link">Hem
+                    </li>
+                </a>
+                <a href="aktivitieter.html" class="nav__link">
+                    <li class="nav-wrapper__list-hidden-link">
+
+                        <img src="/assets/svg/caret2.svg" alt="" class="caret__active-link">Aktiviteter
+
+                    </li>
+                </a>
+
+                <a href="boende.html" class="nav__link">
+                    <li class="nav-wrapper__list-hidden-link">
+                        <img src="/assets/svg/caret2.svg" alt="" class="caret__active-link">Boende
+                    </li>
+                </a>
+
+
+                <a href="nojen.html" class="nav__link">
+                    <li class="nav-wrapper__list-hidden-link">
+                        <img src="/assets/svg/caret2.svg" alt="" class="caret__active-link">Nöjesliv
+                    </li>
+                </a>
+
+
+                <a href="#kontakt" class="nav__link link__active">
+                    <li class="nav-wrapper__list-hidden-link">
+                        <img src="/assets/svg/caret.svg" alt="" class="caret__active-link">Kontakt
+                    </li>
+                </a>
+
+            </ul>
+        </section>
+    </nav>
+
+    <header class="kontakt__h-wrapper h-wrapper-left">
+        <!-- Header blir wrapper -->
+        <!-- Hero -->
+        <section class="bg-overlay__container bg-overlay__container-left">
+            <section class="bg-overlay">
+                <section class="h-item__articles text-head__width">
+                    <!-- Bakgrund -->
+                    <article class="">
+                        <h1 class="no-margin">
+                            Inte bestämt dig än?
+                        </h1>
+                    </article>
+
+                    <article>
+                        <p class="h-item__articles-p">
+                            Om du ännu inte är övertygad om att lämna allt bakom dig och börja ett nytt liv i Örebro får
+                            du gärna kontakta oss för hembesök, rådgivning eller för att boka en föreläsning.
+                        </p>
+                    </article>
+                </section>
+            </section>
+        </section>
+    </header>
+
+    <main>
+        <!-- Main -->
+        <!-- Rubrik -->
+        <h2 class="card-wrapper__h2" id="activity">
+            Kontakta oss
+        </h2>
+        <!-- Fyra kvadrater -->
+
+        <section class="contact__container">
+            <section class="contact__container__forms">
+                <input type="text" id="name" name="name" value="Namn:" class="contact__container__forms-name">
+                <input type="number" id="phone" name="phone" value="Telefonnummer:" class="contact__container__forms-phone">
+                <input type="email" id="email" name="email" value="E-mail:" class="contact__container__forms-email">
+                <input type="number" id="ssnumber" name="ssnumber" value="Personnummer:" class="contact__container__forms-ssnumber">
+                <input type="text" id="message=" name="message=" value="Skriv ett meddelande" class="contact__container__forms-message"> 
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="footer-wrapper">
+        <!-- Footer -->
+
+        <section class="footer__button-up">
+            <a href="#the__top">
+                <img src="/assets/svg/arrow_up.png" alt="pil" class="footer__button-up__arrow">
+            </a>
+        </section>
+
+        <ul class="footer-wrapper__ul">
+            <li>
+                <a href="/views/kontakt.html" class="nav__link link__center">
+                    Kontakt
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="../scripts/dropdownmenu.js"></script>
+</body>
+
+</html>

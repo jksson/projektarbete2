@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Aktiviteter | Upplev Örebro</title>
+    <script src="https://kit.fontawesome.com/cfec937611.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="the__top">
+
+    <nav class="nav__container">
+        <!-- Navigation bar -->
+        <section class="nav-wrapper">
+            <section class="nav__container--wrap-img"><a href="#the__top" class="nav-wrapper__logotype"><img
+                        src="/assets/svg/logo.svg" alt="Logotyp för Upplev Örebro"></a></section>
+            <!-- Menyknapp ska ändra riktning och peka nedåt när aktiv -->
+            <a onclick="menudropdown()" class="desktop__hidden">
+                <i class="fas fa-angle-double-left nav-wrapper__list-button" id="dropDownButton"></i>
+                <!-- <img src="/assets/svg/arrow.svg" alt="Menyknapp för dropdown" > -->
+            </a>
+            <ul class="nav-wrapper__list-hidden" id="dropDownMenu">
+
+                <a href="../index.html" class="nav__link">
+                    <li class="nav-wrapper__list-hidden-link">
+                        <img src="/assets/svg/caret2.svg" alt="" class="caret__active-link">Hem
+                    </li>
+                </a>
+                <a href="aktivitieter.html" class="nav__link">
+                    <li class="nav-wrapper__list-hidden-link">
+
+                        <img src="/assets/svg/caret2.svg" alt="" class="caret__active-link">Aktiviteter
+
+                    </li>
+                </a>
+
+                <a href="boende.html" class="nav__link">
+                    <li class="nav-wrapper__list-hidden-link">
+                        <img src="/assets/svg/caret2.svg" alt="" class="caret__active-link">Boende
+                    </li>
+                </a>
+
+
+                <a href="#nojen" class="nav__link link__active">
+                    <li class="nav-wrapper__list-hidden-link">
+                        <img src="/assets/svg/caret.svg" alt="" class="caret__active-link">Nöjesliv
+                    </li>
+                </a>
+
+
+                <a href="kontakt.html" class="nav__link">
+                    <li class="nav-wrapper__list-hidden-link">
+                        <img src="/assets/svg/caret2.svg" alt="" class="caret__active-link">Kontakt
+                    </li>
+                </a>
+
+            </ul>
+        </section>
+    </nav>
+
+    <header class="nojen__h-wrapper h-wrapper-right">
+        <!-- Header blir wrapper -->
+        <!-- Hero -->
+        <section class="bg-overlay__container bg-overlay__container">
+            <section class="bg-overlay">
+                <section class="h-item__articles text-head__width">
+                    <!-- Bakgrund -->
+                    <article class="">
+                        <h1 class="no-margin">
+                            Staden där allt är möjligt
+                        </h1>
+                    </article>
+
+                    <article>
+                        <p class="h-item__articles-p">
+                            Vad som gör Örebro unikt är att man alltid kan unna sig något roligt.
+
+                            Vad som helst - när som helst.
+
+                            Håll över exemplena nedan för att veta mer.
+                        </p>
+                    </article>
+                </section>
+            </section>
+        </section>
+    </header>
+
+    <main>
+        <!-- Main -->
+        <!-- Rubrik -->
+        <h2 class="card-wrapper__h2" id="activity">
+            Nöjeslivet i Örebro
+        </h2>
+        <!-- Fyra kvadrater -->
+
+        <section class="ent__squares-container">
+            <section class="ent__squares-container-1 ent__container-size ent__container-overlay">
+                <object data="/assets/svg/bowling.svg" type="image/svg+xml" class="ent__squares-container-fig" id="spin">
+                </object>
+                <article class="ent__container-overlay">
+                    <h3 class="ent__container-overlay-h3">BOWLING</h3>
+                    <a href="https://www.strikebowlingorebro.se/" class="ent__squares-container-link">Läs mer <span class="link__active">här</span></a>
+                </article>
+            </section>
+            <section class="ent__squares-container-2 ent__container-size">
+                <object data="/assets/svg/apple.svg" type="image/svg+xml" class="ent__squares-container-fig">
+                </object>
+                <article class="ent__container-overlay">
+                    <h3 class="ent__container-overlay-h3">PALLA FRUKTER</h3>
+                    <a href="https://fruktkartan.se/" class="ent__squares-container-link">Läs mer <span class="link__active">här</span></a>
+                </article>
+            </section>
+            <section class="ent__squares-container-3 ent__container-size">
+                <object data="/assets/svg/cheers.svg" type="image/svg+xml" class="ent__squares-container-fig">
+                </object>
+                <article class="ent__container-overlay">
+                    <h3 class="ent__container-overlay-h3">DRICKA ALKOHOL</h3>
+                    <a href="https://beta.systembolaget.se/" class="ent__squares-container-link">Läs mer <span class="link__active">här</span></a>
+                </article>
+            </section>
+            <section class="ent__squares-container-4 ent__container-size">
+                <object data="/assets/svg/jonglera.svg" type="image/svg+xml" class="ent__squares-container-fig">
+                </object>
+                <article class="ent__container-overlay">
+                    <h3 class="ent__container-overlay-h3">JONGLERA</h3>
+                    <a href="https://www.medborgarskolan.se/arrangemang-sok/lar-dig-jonglera-for-alla-aldrar-1247495/" class="ent__squares-container-link">Läs mer <span class="link__active">här</span></a>
+                </article>
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="footer-wrapper">
+        <!-- Footer -->
+
+        <section class="footer__button-up">
+            <a href="#the__top">
+                <img src="/assets/svg/arrow_up.png" alt="pil" class="footer__button-up__arrow">
+            </a>
+        </section>
+
+        <ul class="footer-wrapper__ul">
+            <li>
+                <a href="/views/kontakt.html" class="nav__link link__center">
+                    Kontakt
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="../scripts/dropdownmenu.js"></script>
+</body>
+
+</html>
