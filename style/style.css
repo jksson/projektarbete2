@@ -8,7 +8,7 @@
     --light-grey:        #F2F2F2;
     --paragraf-grey:     #313131;
     --text-shadow:       rgba(0, 0, 0, 0.43);
-    --box-shadow:        rgba(49, 49, 49, 0.65);
+    --box-shadow:        rgba(37, 41, 50, .8);
     --card-box-shadow:   rgba(0, 0, 0, 0.25);
     scroll-behavior: smooth;
 }
@@ -30,7 +30,9 @@
 }
 
 .bg-overlay { box-shadow: inset 1px 56.25rem var(--box-shadow); }
-.text-head__width { max-width: 18.75rem; }
+.text-head__width { 
+    max-width: 300px; 
+}
 /* Element */
 
 /* Body och en no-margin för återanvändning */
@@ -40,11 +42,14 @@ body,
 }
 
 /* Rubriker och paragraf - standardtext */
+a { text-decoration: none;}
+
 h2,
 h3,
 p { 
     color: var(--paragraf-grey);
     font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
 /* Rubrik med fasta egenskaper */
@@ -52,24 +57,40 @@ h1 {
     font-family: 'Righteous', cursive;
     font-weight: 500;
     color: var(--light-grey);
-    font-size: 4rem;
+    font-size: 3rem;
     text-shadow: 4px 4px 4px var(--text-shadow);
 }
 
+figure {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
 /* Navigation bar */
-.nav-wrapper {
-    position: fixed; 
-    width: 100%;
+
+.nav__container--wrap-img {
     display: flex;
+    flex: 1;
+}
+
+.nav-wrapper {
+    width: 100%;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
     background: var(--dark-grey);
-    padding: .625rem 0;
+    padding: .625rem;
+    display: flex;
+    max-width: 1150px;
 }
 
     /* Logotyp */
-.nav-wrapper__logotype { padding-left: .625rem; }
+.nav-wrapper__logotype { 
+    padding-top: .3rem; 
+    margin: auto 0;
+}
 
     /* Listknapp till dropdown-meny */
 .nav-wrapper__list-button {
@@ -91,7 +112,7 @@ h1 {
     display: none;
     position: fixed; 
     width: 100%;
-    top: 4.25rem;
+    top: 4.25rem; 
     right: 0;
     margin: 0;
     padding-left: 2rem;
@@ -125,11 +146,6 @@ h1 {
     margin-right: .8rem;
 }
 
-.caret__inactive-link {
-    opacity: 0;
-    width: .7rem;
-    margin-right: .8rem;
-}
 
 .nav-wrapper__list-hidden-link:hover {
     background: var(--light-grey);
@@ -137,64 +153,83 @@ h1 {
 }
 
 /* Header */
-.h-wrapper {
-    background: url('/assets/jpg/castle.jpg') no-repeat;
+
+
+.index__h-wrapper { background: url('/assets/jpg/castle.jpg') no-repeat; }
+.activities__h-wrapper { background: url('../assets/jpg/kulturhus.jpg') no-repeat; }
+
+.h-wrapper-left{
     background-size: cover;
     background-position: center;
     height: 46.5625rem;
-    padding: 1rem 0;
-    
+    padding: 0 0; 
 }
+
+.h-wrapper-right {
+    display: grid;
+    justify-content: flex-end; 
+    background-size: cover;
+    background-position: center;
+    height: 46.5625rem;
+    padding: 0 0; 
+}
+
     /* Artikeln i headern */
+.bg-overlay__container {
+    max-width: 13rem;
+    display: grid;
+    min-height: 100%;
+}
 .h-item__articles {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    padding: 8.5rem 1rem;
+    padding: 11.5rem 0 0 .5rem;
 }
 
     /* Paragrafen i headern */
 .h-item__articles-p {
     color: white;
-    font-family: 'Righteous', cursive;
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding-top: 3rem;
     margin: 0;
     text-shadow: 4px 4px 4px var(--text-shadow);
+    max-width: 20ch;
 }
 
 /* Main */
 
 /* Kortens wrapper */
-.card-wrapper {
+.main__card-wrapper {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
     /* Populärt just nu rubrik */
-.card-wrapper__h2 { padding: 3rem;}
+.card-wrapper__h2 { 
+    padding: 3rem;
+
+}
    
     /* Korten */
 .card-wrapper__card {
     display:            flex;
     flex-direction:     column;
-    max-width:          20.8125rem;
+    max-width:          18.8125rem;
     justify-content:    center;
     align-items:        center;
-    margin:             0 auto 2rem auto;
+    margin:             0 auto 5rem auto;
     box-shadow:         1px 1px 6px 0px var(--card-box-shadow);
 }
 
     /* Kortens bild */
 .card-wrapper__card-image {
-    max-width: 20.8125rem; 
+    max-width: 18.8125rem; 
     border-radius: 0.3125rem;
 }
     /* Kortens rubrik */
 .card-wrapper__card-h3 { 
     font-size: 1.2rem;
-    margin: 0.8rem 0;
+    margin: 0.8rem 1.25rem;
 }
     /* Kortens paragraf */
 .card-wrapper__card-p {
@@ -215,16 +250,24 @@ h1 {
 .future-item__articles-p {
     padding-top: 1.6rem;
     color: white;
-    font-family: 'Righteous', cursive;
-    font-size: 1rem;
     margin: 0;
-    font-weight: 100;
     text-shadow: 4px 4px 4px var(--text-shadow);
     max-width: 18.75rem;
 }
 
+/* Aktiviteter */
+    /* Svampplock */
+.activities__container {
+    max-width: 350px;
+    margin: auto;
+}
+.activities__item {
 
-
+}
+.activities__item-img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
 
 /* Footer */
 .footer-wrapper { 
@@ -257,4 +300,137 @@ h1 {
     max-width: 100%;
     margin: .1rem auto 0 auto;
     color: var(--dark-grey);
+}
+
+.nav__container {
+    position: fixed;
+    background: var(--dark-grey);
+    width: 100%;
+    /* max-width: 1000px; */
+    align-items: center;
+}
+
+/* För desktop */
+@media screen and (min-width: 630px) {
+    /* .card-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    } */
+
+    /* 
+    } */
+
+
+
+
+}
+
+@media screen and (min-width:850px) {
+
+
+
+
+    h1 { font-size: 4rem; }
+    
+    .index__h-wrapper { background-position-y: -15rem; }
+
+
+    .desktop__hidden {
+        display: none;
+    }
+    .nav-wrapper__list-hidden { 
+        position: initial;
+        display: flex;
+        flex: 1;
+        width: 100%;
+        right: 0;
+        margin: 0;
+        background: var(--dark-grey);
+        place-items: center;
+    }
+    .nav__container--wrap-img {
+        display: flex;
+        flex: 1;
+    }
+
+    .nav-wrapper {
+        margin: 0 auto;
+        padding: 0 .625rem;
+        height: 4.25rem;
+    }
+
+    .nav-wrapper__list-hidden-link {
+        padding: 1.155rem .5rem;
+        margin-left: .4rem;
+    }
+
+    .nav__link:hover{
+       background: var(--light-grey);
+
+    }
+
+    .bg-overlay {
+        max-width: 22.75rem;
+        padding-left: 2rem;
+    }
+    .bg-overlay__container {
+        max-width: 1220px;
+        display: grid;
+        margin: 0 auto;
+        min-height: 100%;
+    }
+
+    .h-item__articles-p {
+        max-width: 30ch;
+    }
+
+    .main__card-wrapper {
+        display: grid;
+        grid-template-areas:"p p p"
+                            "c1 c2 c3"
+                            "c4 c5 c6";
+        /* grid-template-rows: repeat(auto 1fr); */
+        grid-template-columns: repeat(3, 302px);
+        justify-content: space-between;
+        text-align: center;
+        margin: 0 auto 5rem auto;
+        max-width: 1150px;
+    }
+
+    .card-wrapper__h2   { grid-area: p; }
+    .card__grid-c1      { grid-area: c1; display: block;}
+    .card__grid-c2      { grid-area: c2; display: block;}
+    .card__grid-c3      { grid-area: c3; display: block;}
+    .card__grid-c4      { grid-area: c4; display: block;}
+    .card__grid-c5      { grid-area: c5; display: block;}
+    .card__grid-c6      { grid-area: c6; display: block;}
+
+    .text-head__width {
+        max-width: 30rem;
+    }
+
+    .future-article__bg-wrapper {
+        max-width: 1220px;
+        margin: auto;
+    }
+
+    .future-article__bg {
+        background:  url(/assets/jpg/coal.jpg) no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        padding: 0;
+    }
+
+
+    .future-article__bg-overlay {
+        max-width: 30rem;
+        box-shadow: inset 1px 56.25rem var(--box-shadow);
+        padding: 2rem;
+    }
+
+    .activities__container {
+        max-width: 1150px;
+        margin: auto;
+    }
+
 }
